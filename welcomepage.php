@@ -19,7 +19,7 @@
 
 <body>
 	<div class="container-dashboard">
-		Welcome to the dashboard! <span class="user-name"><?php echo ucwords($_SESSION['first_name'])?> <?php echo ucwords($_SESSION['last_name']);?> </span> 
+		Welcome to the dashboard! <span class="user-name"><?php echo ucwords($_SESSION['$password'])?> </span> 
 		<br>
 		
 		<a href="logout.php?logout=true" class="logout-link">Logout</a>
