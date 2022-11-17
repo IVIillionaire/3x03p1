@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 		
-	if(!isset($_SESSION['user_id']))
+	if(!isset($_SESSION['password']))
 	{
 		header('location:index.php');
 		exit;
@@ -19,7 +19,7 @@
 
 <body>
 	<div class="container-dashboard">
-		Welcome to the dashboard! <span class="user-name"><?php echo ucwords($_SESSION['$password'])?> </span> 
+		Welcome to the dashboard! <span class="password"><?php echo ucwords($_SESSION['$password'])?> </span> 
 		<br>
 		
 		<a href="logout.php?logout=true" class="logout-link">Logout</a>
