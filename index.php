@@ -10,11 +10,11 @@
 			
 			if($email == "user@example.com")
 			{	
-				if($password == "password1234")
+				if($password == (!$uppercase || !$lowercase || !$number || strlen($password) <10))
 				$uppercase = preg_match('@[A-Z]@', $password);
 				$lowercase = preg_match('@[a-z]@', $password);
 				$number    = preg_match('@[0-9]@', $password);
-				(!$uppercase || !$lowercase || !$number || strlen($password) <10) 
+				
 				{
 					$_SESSION['user_id'] = $email;
 					
