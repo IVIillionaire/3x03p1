@@ -21,10 +21,10 @@ pipeline {
 						}
 					}
 					stage('OWASP DependencyCheck') {
-			steps {
-				dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
-			}
-		}
+						steps {
+							dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
+						}
+					}
 					post {
 						always {
 							junit 'target/surefire-reports/*.xml'
