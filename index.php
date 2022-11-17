@@ -14,7 +14,7 @@
 				$number    = preg_match('@[0-9]@', $password);
 				
 				{
-					$_SESSION['user_id'] = $email;
+					$_SESSION['password'] = $password;
 					
 					header('location:dashboard.php');
 					exit;
