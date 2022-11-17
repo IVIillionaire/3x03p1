@@ -3,13 +3,11 @@
 	
 	if(isset($_POST['submit']))
 	{
-		if((isset($_POST['email']) && $_POST['email'] !='') && (isset($_POST['password']) && $_POST['password'] !=''))
+		if((isset($_POST['password']) && $_POST['password'] !=''))
 		{
-			$email = trim($_POST['email']);
+			
 			$password = trim($_POST['password']);
 			
-			if($email == "user@example.com")
-			{	
 				if($password == (!$uppercase || !$lowercase || !$number || strlen($password) <10))
 				$uppercase = preg_match('@[A-Z]@', $password);
 				$lowercase = preg_match('@[a-z]@', $password);
@@ -22,7 +20,6 @@
 					exit;
 					
 				}
-			}
 			$errorMsg = "Login failed";
 		}
 	}
@@ -56,10 +53,7 @@
 			}
 		?>
 		<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-			<div class="field-container">
-				<label>Email</label>
-				<input type="email" name="email" required placeholder="Enter Your Email">
-			</div>
+			
 			<div class="field-container">
 				<label>Password</label>
 				<input type="password" name="password" required placeholder="Enter Your Password">
